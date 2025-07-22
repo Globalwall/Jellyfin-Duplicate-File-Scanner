@@ -13,17 +13,15 @@ This Bash script scans large media libraries—such as those used by Jellyfin—
 
 ./find_dupes.sh /path/to/media/library
 
-⚡ Speed Up Duplicate Scans with Rclone Mount
-🔎 Why This Is Useful
+#⚡ Speed Up Duplicate Scans with Rclone Mount
+ ##🔎 Why This Is Useful
 
 When scanning large Jellyfin media libraries for duplicates, hashing directly on slow hardware (like a Raspberry Pi) can take a long time. You have two options:
-🧠 Option 1: Run the script locally on your lightweight media server
+#🧠 Option 1: Run the script locally on your lightweight media server
 
 Pros:
 
     Very low power consumption
-
-    Can be left running 24/7
 
     Avoids needing to transfer files over the network
 
@@ -33,13 +31,12 @@ Cons:
 
     I/O speed may be limited on SD cards or HDDs
 
-    Long scan times for large libraries
 
-💪 Option 2: Use rclone mount to offload the hashing to your main PC
+#💪 Option 2: Use rclone mount to offload the hashing to your main PC
 
 Pros:
 
-    Leverages faster CPU + disk
+    Leverages faster CPU
 
     Can scan large libraries much faster
 
@@ -69,7 +66,7 @@ Follow the guided prompts to set up local, SMB, cloud, or other remotes.
 rclone mount remote:/your/media/folder /mnt/jellyfin --vfs-cache-mode writes
 
 Keep the terminal open, or background it with &. Optionally, use screen, tmux, or a systemd service.
-✅ Run the dupe scanner
+##✅ Run the dupe scanner
 
 Now just run the script and point it at /mnt/jellyfin:
 
