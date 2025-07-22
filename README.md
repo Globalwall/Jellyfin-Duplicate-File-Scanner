@@ -1,4 +1,4 @@
-## Jellyfin Duplicate File Scanner
+# Jellyfin Duplicate File Scanner
 
 This Bash script scans large media libraries—such as those used by Jellyfin—for duplicate files efficiently. It targets files larger than 20MB, skipping smaller files and common unwanted extensions to save time and resources.
 
