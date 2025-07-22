@@ -1,2 +1,14 @@
 # jellyfin-dupe-scan
-A Bash script to scan large media libraries (like Jellyfin's) for duplicate files by hashing the first and last 10MB of each file larger than 20MB. It skips common unwanted extensions to speed up the process. The script reports duplicates, providing a fast and practical way to identify duplicates without hashing entire files.
+
+This Bash script scans large media libraries—such as those used by Jellyfin—for duplicate files efficiently. It targets files larger than 20MB, skipping smaller files and common unwanted extensions to save time and resources.
+
+## How It Works
+
+- Uses partial hashing by reading the **first 10MB** and **last 10MB** of each eligible file.
+- Skips files smaller than 20MB and files with unwanted extensions (e.g., `.jpg`, `.srt`).
+- Compares combined hashes and file sizes to identify duplicates without hashing the entire file.
+- Reports duplicate files for easy cleanup and library optimization.
+
+## Usage
+
+./find_dupes.sh /path/to/media/library
